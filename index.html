@@ -138,7 +138,9 @@
       if(lastNumber != randomNum) {
         const promise = audio.play()
 
-        promise.catch(() => {
+        promise.then(() => {
+          unmuteButton.style.visibility = "visible"
+        }).catch(() => {
           unmuteButton.style.visibility = "visible"
         })
       }
