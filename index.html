@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>You love men? (Good for you)</title>
+
+  <meta name="description" content="A site to send to all the man lovers and boykissers you know">
+
+  <link rel="shortcut icon" href="https://em-content.zobj.net/source/apple/391/rainbow-flag_1f3f3-fe0f-200d-1f308.png" type="image/png">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    main {
+      width: 100vw;
+      max-width: 100%;
+
+      height: 100vh;
+
+      display: flex;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+    }
+
+    div {
+      height: 100%;
+
+      flex: 1;
+    }
+
+    div:nth-child(1) {
+      background-color: #FF0000;
+    }
+    div:nth-child(2) {
+      background-color: #FF7F00;
+    }
+    div:nth-child(3) {
+      background-color: #FFFF00;
+    }
+    div:nth-child(4) {
+      background-color: #00FF00;
+    }
+    div:nth-child(5) {
+      background-color: #0000FF;
+    }
+    div:nth-child(6) {
+      background-color: #4B0082;
+    }
+    div:nth-child(7) {
+      background-color: #9400D3;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </main>
+
+  <img src="">
+
+  <script defer>    
+    const susCat = ["https://c.tenor.com/y4sm38ArtSwAAAAC/tenor.gif", "A cat who is suspicious (But ultimately accepting) of your sexuality"]
+    const boyKisser = ["https://seeklogo.com/images/B/boykisser-logo-2C0766BE33-seeklogo.com.png", "Boykisser (You)"]
+
+    const images = [susCat, boyKisser]
+
+    const imageElement = document.querySelector("img")
+
+    const randomImage = Math.floor(Math.random() * images.length)
+
+    imageElement.src = images[randomImage][0]
+    imageElement.alt = images[randomImage][1]
+  </script>
+</body>
+</html>
