@@ -132,9 +132,6 @@
     const setImage = (imageElement, images, audio, unmuteButton, lastNumber) => {
       const randomNum = Math.floor(Math.random() * images.length)
 
-      imageElement.src = images[randomNum][0]
-      imageElement.alt = images[randomNum][1]
-
       if(lastNumber != randomNum) {
         const promise = audio.play()
 
@@ -143,6 +140,9 @@
         }).catch(() => {
           unmuteButton.style.visibility = "visible"
         })
+
+        imageElement.src = images[randomNum][0]
+        imageElement.alt = images[randomNum][1]
       }
 
       return randomNum
